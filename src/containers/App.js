@@ -1,16 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-const App = () => {
+import CabinsOverview from './CabinsOverview';
+
+const App = ({cabins}) => {
     return (
         <div>
-            Cabin booker
+            <h1>Cabin booker</h1>
+            <CabinsOverview />
         </div>
     );
 }
 
 
 const mapStateToProps = state => ({
+  cabins: state.cabins
 });
 
 export default connect(mapStateToProps)(App);

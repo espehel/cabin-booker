@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Hytte 1",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Hytte 2",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Hytte 3",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Hytte 4",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Hytte 5",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Hytte 6",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Hytte 7",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Hytte 8",
+    "location": "Trysil",
+    "img": "https://c1.staticflickr.com/1/52/183037060_e228a3f3e3_o.jpg"
+  }
+]

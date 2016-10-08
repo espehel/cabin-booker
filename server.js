@@ -6,6 +6,8 @@ var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
 var config = require('./webpack.config');
 var compiler = webpack(config);
+var path = require('path');
+
 
 var port = 9999;
 
@@ -26,8 +28,13 @@ app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static('public'));
 // Send index.html for all other routes
-app.use(function(req, res) {
+app.use('/', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/api/cabins/:id', (req, res) => {
+  console.log(mockedJSON);
+  res.sendFile(path.normalize(__dirname + '/mock/fetch-cabins.json'))
 });
 
 var server = http.createServer(app);
