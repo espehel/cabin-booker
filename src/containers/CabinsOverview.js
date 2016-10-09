@@ -13,7 +13,11 @@ class CabinsOverview extends Component {
   render() {
     return (
     <div>
-      <h2>Your cabins:</h2>
+      <div className="row">
+        <div className="col s12 l8 offset-l4">
+          <h2>Your cabins:</h2>
+        </div>
+      </div>
       <CabinList cabins={this.props.cabins}/>
     </div>
   )

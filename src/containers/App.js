@@ -2,15 +2,18 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import CabinsOverview from './CabinsOverview';
+import NavBar from '../components/NavBar';
 
-const App = ({cabins}) => {
-    return (
-        <div>
-            <h1>Cabin booker</h1>
-            <CabinsOverview />
-        </div>
-    );
-}
+const App = () => {
+  return (
+    <div>
+      <NavBar />
+      <div className="container">
+        <CabinsOverview />
+      </div>
+    </div>
+  );
+};
 
 
 const mapStateToProps = state => ({

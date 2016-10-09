@@ -1,5 +1,5 @@
 import React from 'react';
-import CabinThumbnail from './CabinThumbnail';
+import CabinThumbnail from './CabinCard';
 
 export default ({cabins}) => {
 
@@ -8,10 +8,12 @@ export default ({cabins}) => {
   }
 
   return (
-    <div>
-      {
-        cabins.map(cabin => (<CabinThumbnail cabin={cabin}/>))
-      }
+    <div className="row">
+      <div className="col s12 l8 offset-l2">
+        {
+          cabins.map(cabin => (<CabinThumbnail cabin={cabin}/>))
+        }
+      </div>
     </div>
   )
 }
