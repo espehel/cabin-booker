@@ -10,13 +10,6 @@ var compiler = webpack(config);
 
 var port = 9999;
 
-function noCache(req, res, next) {
-  res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-  res.header('Expires', '-1');
-  res.header('Pragma', 'no-cache');
-  next();
-}
-
 var app = express();
 
 app.use(webpackDevMiddleware(compiler, {
@@ -29,17 +22,13 @@ app.use(express.static('public'));
 
 //--------mocked api call------------------//
 app.get('/api/cabins/:id', (req, res) => {
-  console.log("api");
   res.sendFile(__dirname + '/mock/fetch-cabins-mocked.json');
 });
 
 // Send index.html for all other routes
-app.use(function(req, res) {
-  console.log("index");
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
-
-
 
 var server = http.createServer(app);
 

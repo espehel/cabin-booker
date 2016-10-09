@@ -4,12 +4,12 @@ import {connect} from 'react-redux';
 import CabinsOverview from './CabinsOverview';
 import NavBar from '../components/NavBar';
 
-const App = () => {
+const App = ({children}) => {
   return (
     <div>
       <NavBar />
       <div className="container">
-        <CabinsOverview />
+        {children}
       </div>
     </div>
   );
