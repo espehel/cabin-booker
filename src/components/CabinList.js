@@ -11,7 +11,7 @@ export default ({cabins}) => {
     <div className="row">
       <div className="col s12 l8 offset-l2">
         {
-          cabins.map(cabin => (<CabinThumbnail cabin={cabin}/>))
+          cabins.map(cabin => (<CabinThumbnail key={cabin.id} cabin={cabin}/>))
         }
       </div>
     </div>
