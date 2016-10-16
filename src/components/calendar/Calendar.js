@@ -1,7 +1,7 @@
 import React from 'react';
 import Week from './Week';
 
-export default ({year, month}) => {
+export default ({year, month, onDayClick}) => {
 
   const start = new Date(year, month).getDay();
   const length = new Date(year, month + 1, 0).getDate();
@@ -35,7 +35,7 @@ export default ({year, month}) => {
 
   return (
     <div className="container">
-      {weeks.map((week, i) => <Week key={i} week={week}/>)}
+      {weeks.map((week, i) => <Week key={i} week={week} onDayClick={(day) => onDayClick(new Date(year, month, day))} />)}
     </div>
   )
 };

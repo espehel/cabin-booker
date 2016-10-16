@@ -1,9 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {bookCabins} from '../actions/index';
 
 import Calendar from '../components/calendar/Calendar';
 
-const CabinPage = ({cabin}) => {
+const CabinPage = ({cabin, onDayClick}) => {
 
   if (!cabin) {
     return null;
@@ -15,7 +16,7 @@ const CabinPage = ({cabin}) => {
       <img className="responsive-img circle" src={cabin.img} />
       <p className="bold">Location: {cabin.location}</p>
       <p className="bold">Owner: {cabin.owner}</p>
-      <Calendar year={2016} month={10}/>
+      <Calendar year={2016} month={10} onDayClick={(date) => onDayClick(cabin.id, "user1", date)} />
     </div>
   )
 }
@@ -26,4 +27,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(CabinPage);
+const mapDispatchToProps = dispatch => ({
+  onDayClick: (cabinId, userId, date) => dispatch(bookCabins(cabinId, userId, date))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CabinPage);
