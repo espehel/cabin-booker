@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default ({number}) => {
+export default ({date, style}) => {
   return (
-    <p>
-      {number}
-    </p>
+    <div className={`col day ${style}`}>
+      {date}
+    </div>
   )
 }
